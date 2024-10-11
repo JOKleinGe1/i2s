@@ -6,4 +6,4 @@ tb_i2s.vcd :tb_i2s.vvp
 	vvp   $^ 
 
 clean :
-	rm -f *.vcd *.vvp
+	rm -rf *.vcd *.vvp db incremental_db output_files simulation

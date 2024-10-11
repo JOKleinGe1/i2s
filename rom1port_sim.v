@@ -6,13 +6,13 @@
 module rom1port (
 	input	[14:0] 	address,
 	input	  clock,
-	output 	reg [15:0] 	q
+	output 	reg [31:0] 	q
 	);
  
-	reg [15:0] 	memory [0:`MEMORYSIZE-1];
+	reg [31:0] 	memory [0:`MEMORYSIZE-1];
 
 	initial begin
-		$readmemh("sound.mem16",memory);
+		$readmemh("sound.mem32",memory);
 	end
 
 	always @(posedge clock) begin
